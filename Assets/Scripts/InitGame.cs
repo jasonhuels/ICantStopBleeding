@@ -16,28 +16,30 @@ public class InitGame : MonoBehaviour
                              {'1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1'},
                              {'1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1'},
                              {'1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1'},
-                             {'1','0','0','0','0','0','0','P','0','0','0','0','0','0','0','1'},
-                             {'1','0','0','0','0','0','1','1','1','0','0','0','0','0','0','1'},
                              {'1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1'},
+                             {'1','0','0','0','0','0','1','1','1','0','0','0','0','0','0','1'},
+                             {'1','0','0','0','0','0','0','P','0','0','0','0','0','0','0','1'},
                              {'1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1'},
                              {'1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1'},
                              {'1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1'},
                              {'1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1'},
                              {'1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1'},
                              {'1','1','1','1','1','1','1','1','1','1','1','1','1','1','1','1'}};
+
+    private string Level = "1111111111111111";
                              
 
   // Start is called before the first frame update
   void Start()
     {
-        for(int x=0; x<columns; x++) {
-            for(int y=0; y<rows; y++) {
-                if(level[y, x] == '1'){
-                    GameObject instance = Instantiate(wall, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
-                } else if(level[y,x] =='P'){
-                    GameObject instance = Instantiate(player, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
+        for(int x=0; x<rows; x++) {
+            for(int y=0; y<columns; y++) {
+                if(level[x, y] == '1'){
+                    GameObject instance = Instantiate(wall, new Vector3(y, x, 0f), Quaternion.identity) as GameObject;
+                } else if(level[x,y] =='P'){
+                    GameObject instance = Instantiate(player, new Vector3(y, x, 0f), Quaternion.identity) as GameObject;
                 }
-                Debug.Log(level[x,y]);
+            
             }
         }
     }
