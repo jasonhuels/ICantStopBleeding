@@ -5,6 +5,7 @@ using UnityEngine;
 public class InitGame : MonoBehaviour
 {
     public GameObject wall;
+    public GameObject player;
     public int columns = 32;
     public int rows = 32;
 
@@ -14,7 +15,11 @@ public class InitGame : MonoBehaviour
         for(int x=0; x<columns; x++) {
             for(int y=0; y<rows; y++) {
                 //At each index add a new Vector3 to our list with the x and y coordinates of that position.
-                GameObject instance = Instantiate(wall, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
+                if(x==0 || x ==columns-1 || y ==0 || y ==rows-1) {
+                    GameObject instance = Instantiate(wall, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
+                } else if(x == 6 && y == 6){
+                    GameObject instance = Instantiate(player, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
+                }
             }
         }
     }
