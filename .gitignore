@@ -1,0 +1,44 @@
+###
+# Unity folders and files
+###
+/ICantStopBleeding/[Aa]ssets/AssetStoreTools*
+/ICantStopBleeding/[Bb]uild/
+/ICantStopBleeding/[Ll]ibrary/
+/ICantStopBleeding/[Ll]ocal[Cc]ache/
+/ICantStopBleeding/[Oo]bj/
+/ICantStopBleeding/[Tt]emp/
+/ICantStopBleeding/[Uu]nityGenerated/
+# file on crash reports
+sysinfo.txt
+# Unity3D generated meta files
+![Aa]ssets/**/*.meta
+
+Temp/
+
+###
+# VS/MD solution and project files
+###
+[Ee]xportedObj/
+*.booproj
+*.csproj
+*.sln
+*.suo
+*.svd
+*.unityproj
+*.user
+*.userprefs
+*.pidb
+.DS_Store
+
+###
+# OS generated
+###
+.DS_Store
+.DS_Store?
+.vscode
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
