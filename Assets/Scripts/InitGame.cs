@@ -17,7 +17,7 @@ public class InitGame : MonoBehaviour
                              {'1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1'},
                              {'1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1'},
                              {'1','0','0','0','0','0','0','P','0','0','0','0','0','0','0','1'},
-                             {'1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1'},
+                             {'1','0','0','0','0','0','1','1','1','0','0','0','0','0','0','1'},
                              {'1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1'},
                              {'1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1'},
                              {'1','0','0','0','0','0','0','0','0','0','0','0','0','0','0','1'},
@@ -32,17 +32,12 @@ public class InitGame : MonoBehaviour
     {
         for(int x=0; x<columns; x++) {
             for(int y=0; y<rows; y++) {
-                // //At each index add a new Vector3 to our list with the x and y coordinates of that position.
-                // if(x==0 || x ==columns-1 || y ==0 || y ==rows-1) {
-                //     GameObject instance = Instantiate(wall, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
-                // } else if(x == 6 && y == 6){
-                //     GameObject instance = Instantiate(player, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
-                // }
-                if(level[x, y] == '1'){
+                if(level[y, x] == '1'){
                     GameObject instance = Instantiate(wall, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
-                } else if(level[x,y] =='P'){
+                } else if(level[y,x] =='P'){
                     GameObject instance = Instantiate(player, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
                 }
+                Debug.Log(level[x,y]);
             }
         }
     }
