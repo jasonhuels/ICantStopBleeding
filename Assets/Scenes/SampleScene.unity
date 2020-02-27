@@ -151,8 +151,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wall: {fileID: 5587038637846874977, guid: 944a54483efdacb4eafba1252b3c2c20, type: 3}
   player: {fileID: 845566402638963459, guid: b63ff047d71ac874699b6bda6437be8b, type: 3}
-  columns: 16
-  rows: 16
+  height: 16
+  width: 20
 --- !u!4 &151005421
 Transform:
   m_ObjectHideFlags: 0
@@ -545,7 +545,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.61343
+  orthographic size: 7.9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -569,7 +569,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 8, z: -100}
+  m_LocalPosition: {x: 9, y: -8, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2141478369}
